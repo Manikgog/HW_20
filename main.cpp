@@ -52,7 +52,7 @@ int main() {
 	SetConsoleCP(1251);
 	srand(time(NULL));
 
-	const int length = 10;
+	const int length = 100;
 	int arr[length];
 	do{
 		fill_arr(arr, length, -100, 100);
