@@ -57,6 +57,7 @@ int main() {
 	do{
 		fill_arr(arr, length, -100, 100);
 	} while (check_same_number(arr, length) == 0);
+	std::cout << "Array:\n";
 	show_arr(arr, length);
 	std::cout << "\n\n\n";
 	char c = 'y';
@@ -296,23 +297,8 @@ void fill_arr(T* arr, const int size, int low, int hi) {
 
 template <typename T>
 void show_arr(T* arr, const int size) {
-	std::cout << "indexes -> ";
-	for (int i = 0; i < size; i++) {
-		if (arr[i] < 0)
-			std::cout << " ";
-		std::cout << i;
-		int num_dig=0;
-		int tmp = arr[i];
-		while (tmp) {
-			num_dig++;
-			tmp /= 10;
-		}
-		for (int i = 0; i < num_dig; i++) {
-			std::cout << " ";
-		}
-		std::cout << " ";
-	}
-	std::cout << "\n         [ ";
+	
+	std::cout << "[ ";
 	for (int i = 0; i < size; ++i) {
 		std::cout << arr[i] << ", ";
 	}
